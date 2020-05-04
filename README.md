@@ -1,7 +1,7 @@
 # Decorators
 This Repository is for Decorators
 
-**Carousel is added **Supports most of the browser. **licenced under the category of open-source free licence crendentials. **The information like company name or anything provided in this plugin is only an fake one.
+**Decorators is added **Supports most of the browser. **licenced under the category of open-source free licence crendentials. **The information like company name or anything provided in this plugin is only an fake one.
 
 live demo:http://arunbharath.c1.biz/PluginDemo/Decorators/
 
