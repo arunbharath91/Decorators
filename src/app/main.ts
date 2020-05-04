@@ -1,3 +1,4 @@
+import '../style.scss';
 import { Freeze, Debounce, Throttle } from "./decorators";
 
 @Freeze
