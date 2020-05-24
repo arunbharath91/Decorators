@@ -32,21 +32,21 @@ export const Throttle = (wait: number) => {
 
     // store timeout value for cancel the timeout
     let lastFn: any;
-    let lastRan: any;
+    let lastRun: any;
     // store original function for future use
     const original = descriptor.value;
     descriptor.value = function(args: any) {
-      if (!lastRan) {
+      if (!lastRun) {
         original.apply(this, args)
-        lastRan = Date.now()
+        lastRun = Date.now()
       } else {
         clearTimeout(lastFn)
         lastFn = setTimeout(() => {
-          if ((Date.now() - lastRan) >= wait) {
+          if ((Date.now() - lastRun) >= wait) {
             original.apply(this, args)
-            lastRan = Date.now()
+            lastRun = Date.now()
           }
-        }, wait - (Date.now() - lastRan))
+        }, wait - (Date.now() - lastRun))
       }
 
     }
