@@ -25,7 +25,6 @@ export const Debounce = (wait: number, immediate: boolean = false) => {
   }
 }
 
-
 export const Throttle = (wait: number) => {
 
   return (target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor) => {
