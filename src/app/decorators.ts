@@ -52,3 +52,20 @@ export const Throttle = (wait: number) => {
     return descriptor;
   }
 }
+
+export const SINGLETON_KEY = Symbol();
+
+export const Singleton = (classTarget: any) => {
+  return new Proxy(classTarget, {
+    construct(target, argumentsList: any[], newTarget) {
+      // Skip proxy for children
+      if (target.prototype !== newTarget.prototype) {
+        return Reflect.construct(target, argumentsList, newTarget)
+      }
+      if (!target[SINGLETON_KEY]) {
+        target[SINGLETON_KEY] = Reflect.construct(target, argumentsList, newTarget)
+      }
+      return target[SINGLETON_KEY]
+    },
+  })
+}

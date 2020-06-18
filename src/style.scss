@@ -18,3 +18,34 @@ body {
   line-height: 26px;
   letter-spacing: 0.5px;
 }
+
+pre.markdown {
+    background-color: rgba(238, 238, 238, 0.35);
+    background-color: #2b3a42;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 8px 16px;
+    border-radius: 3px;
+    // position: relative;
+    // height: 100;
+}
+pre.markdown code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+    background: transparent;
+    text-shadow: 0 1px 0 rgba(23, 31, 35, 0.5);
+    color: #a5cee1;
+//     position: absolute;
+// left: 0;
+}
+
+pre.markdown p {
+  color: yellow;
+  margin: 0;
+}
+.d-flex {
+  display: flex;
+}
