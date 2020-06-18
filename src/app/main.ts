@@ -3,7 +3,9 @@ import { Freeze, Debounce, Throttle, Singleton } from "./decorators";
 
 @Freeze
 export class FreezedClass {
-
+constructor() {
+  
+}
 }
 
 class Http {

@@ -1,4 +1,4 @@
-export const Freeze = (constructor: Function) => {
+export const Freeze = (constructor: any) => {
   Object.freeze(constructor);
   Object.freeze(constructor.prototype);
 }
